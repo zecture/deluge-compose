@@ -1,0 +1,17 @@
+version: "2.1"
+services:
+  deluge:
+    image: linuxserver/deluge
+    container_name: deluge
+    network_mode: host
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Helsinki
+      - UMASK_SET=022 #optional
+      - DELUGE_LOGLEVEL=error #optional
+    volumes:
+      - /home/zece/Documents/containers/deluge/deluge-config/:/config
+      - /media/zece/WDGR Lext4/Torrents/:/downloads
+    restart: unless-stopped
+
