@@ -11,7 +11,7 @@ services:
       - UMASK_SET=022 #optional
       - DELUGE_LOGLEVEL=error #optional
     volumes:
-      - /home/zece/Documents/containers/deluge/deluge-config/:/config
-      - /media/zece/WDGR Lext4/Torrents/:/downloads
+      - PATH-TO-REPO/deluge-compose/deluge-config/:/config
+      - PATH-TO-DOWNLOADS-FOLDER/:/downloads
     restart: unless-stopped
 
